@@ -1,0 +1,163 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebService xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webservice">
+   <list n="CHILD_NODES">
+      <url path="../../../../../../../../EjecucionProcesoMultiPropositosService.wsdl"/>
+      <url path="../../../../base/encabezadossoa/ObjectFactory.java"/>
+      <url path="../../../../base/encabezadossoa/EncabezadoEntradaType.java"/>
+      <url path="../../../../base/encabezadossoa/EncabezadoSalidaType.java"/>
+      <url path="../../xsd/ejecutarproceso/EjecutarProcesoEntradaType.java"/>
+      <url path="../../xsd/ejecutarproceso/package-info.java"/>
+      <url path="../../xsd/ejecutarproceso/MnsjeEntradaType.java"/>
+      <url path="../../xsd/ejecutarproceso/ObjectFactory.java"/>
+      <url path="../../xsd/ejecutarproceso/MnsjeSalidaType.java"/>
+      <url path="../../xsd/ejecutarproceso/EjecutarProcesoSalidaType.java"/>
+      <url path="EjecucionProcesoMultiPropositosPortType.java"/>
+      <url path="../../../../base/encabezadossoa/package-info.java"/>
+      <url path="EjecucionProcesoMultiPropositosPortTypeImpl.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MTOM"/>
+      <list n="BD_">
+         <hash>
+            <value n="BOUND_PORT_TYPE" v="{http://bancodeoccidente.com.co/Servicios/Negocio/Administracion/wsdl/EjecucionProcesoMultiPropositos}EjecucionProcesoMultiPropositosPortType"/>
+            <value n="DEFAULT_NAME" v="false"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+            <value n="NAME" v="{http://bancodeoccidente.com.co/Servicios/Negocio/Administracion/wsdl/EjecucionProcesoMultiPropositos}EjecucionProcesoMultiPropositosBinding"/>
+            <list n="OP_BINDINGS">
+               <hash>
+                  <value n="BD_RESPONSE_PART" v="output"/>
+                  <value n="BD_SOAP_ACTION" v="http://bancodeoccidente.com.co/Servicios/Negocio/Administracion/wsdl/EjecucionProcesoMultiPropositos/ejecutarProceso"/>
+                  <value n="BD_WSDL_RETURN_NAME" v="EjecutarProcesoRta"/>
+                  <value n="BD_WSDL_RETURN_TNS" v="http://bancodeoccidente.com.co/Servicios/Negocio/Administracion/xsd/EjecutarProceso"/>
+                  <value n="BOUND_OPERATION" v="co.com.bancodeoccidente.servicios.negocio.administracion.xsd.ejecutarproceso.MnsjeSalidaType.ejecutarProceso.co.com.bancodeoccidente.servicios.negocio.administracion.xsd.ejecutarproceso.MnsjeEntradaType"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </list>
+            <hash n="PROPERTY_GROUPS"/>
+         </hash>
+      </list>
+      <list n="BINDING_FILES"/>
+      <list n="GENERATED_FILES">
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\aFabricaSAM\Semillero\SEM_Semillero\LOGICA_NEGOCIO\src\co\com\bancodeoccidente\servicios\base\encabezadossoa\ObjectFactory.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\aFabricaSAM\Semillero\SEM_Semillero\LOGICA_NEGOCIO\src\co\com\bancodeoccidente\servicios\base\encabezadossoa\EncabezadoEntradaType.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\aFabricaSAM\Semillero\SEM_Semillero\LOGICA_NEGOCIO\src\co\com\bancodeoccidente\servicios\base\encabezadossoa\EncabezadoSalidaType.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\aFabricaSAM\Semillero\SEM_Semillero\LOGICA_NEGOCIO\src\co\com\bancodeoccidente\servicios\negocio\administracion\xsd\ejecutarproceso\EjecutarProcesoEntradaType.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\aFabricaSAM\Semillero\SEM_Semillero\LOGICA_NEGOCIO\src\co\com\bancodeoccidente\servicios\negocio\administracion\xsd\ejecutarproceso\package-info.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\aFabricaSAM\Semillero\SEM_Semillero\LOGICA_NEGOCIO\src\co\com\bancodeoccidente\servicios\negocio\administracion\xsd\ejecutarproceso\MnsjeEntradaType.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\aFabricaSAM\Semillero\SEM_Semillero\LOGICA_NEGOCIO\src\co\com\bancodeoccidente\servicios\negocio\administracion\xsd\ejecutarproceso\ObjectFactory.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\aFabricaSAM\Semillero\SEM_Semillero\LOGICA_NEGOCIO\src\co\com\bancodeoccidente\servicios\negocio\administracion\xsd\ejecutarproceso\MnsjeSalidaType.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\aFabricaSAM\Semillero\SEM_Semillero\LOGICA_NEGOCIO\src\co\com\bancodeoccidente\servicios\negocio\administracion\xsd\ejecutarproceso\EjecutarProcesoSalidaType.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\aFabricaSAM\Semillero\SEM_Semillero\LOGICA_NEGOCIO\src\co\com\bancodeoccidente\servicios\negocio\administracion\wsdl\ejecucionprocesomultipropositos\EjecucionProcesoMultiPropositosPortType.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\aFabricaSAM\Semillero\SEM_Semillero\LOGICA_NEGOCIO\src\co\com\bancodeoccidente\servicios\base\encabezadossoa\package-info.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+      </list>
+      <value n="GUID" v="88f1f3a2-017f-1000-8002-0a00020f0247"/>
+      <value n="LAST_GENERATION_BOTTOM_UP" v="false"/>
+      <list n="LOCAL_FILES"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.EJB30WebService"/>
+      <list n="PO_">
+         <hash>
+            <value n="DEFAULT_NAME" v="false"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+            <value n="NAME" v="EjecucionProcesoMultiPropositosPort"/>
+            <value n="PORT_BINDING_NAME" v="{http://bancodeoccidente.com.co/Servicios/Negocio/Administracion/wsdl/EjecucionProcesoMultiPropositos}EjecucionProcesoMultiPropositosBinding"/>
+            <list n="PORT_OPS">
+               <hash>
+                  <value n="EXPOSED_BD_OPERATION" v="co.com.bancodeoccidente.servicios.negocio.administracion.xsd.ejecutarproceso.MnsjeSalidaType.ejecutarProceso.co.com.bancodeoccidente.servicios.negocio.administracion.xsd.ejecutarproceso.MnsjeEntradaType"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </list>
+            <hash n="PROPERTY_GROUPS"/>
+            <url n="URL" protocol="http" host="localhost" port="7101" path="/AdministracionListasRiesgoBatch/EjecucionProcesoMultiPropositosPortTypeImplService"/>
+         </hash>
+      </list>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="ADD_ANNOTATIONS">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.AnnotationProperties"/>
+         </hash>
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+         </hash>
+      </hash>
+      <list n="PT_">
+         <hash>
+            <value n="AUTO_SERVICE_INTERFACE"/>
+            <value n="DEFAULT_NAME" v="false"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.EJB30PortType"/>
+            <value n="NAME" v="{http://bancodeoccidente.com.co/Servicios/Negocio/Administracion/wsdl/EjecucionProcesoMultiPropositos}EjecucionProcesoMultiPropositosPortType"/>
+            <list n="OP_">
+               <hash>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaOperation"/>
+                  <value n="OP_JAVA_NAME" v="ejecutarProceso"/>
+                  <list n="OP_JAVA_PARAMETERS">
+                     <hash>
+                        <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaParameter"/>
+                        <value n="NAME" v="input"/>
+                        <value n="PA_MODE" v="0"/>
+                        <value n="PA_WSDL_NAME" v="EjecutarProceso"/>
+                        <value n="TARGET_NAMESPACE" v="http://bancodeoccidente.com.co/Servicios/Negocio/Administracion/xsd/EjecutarProceso"/>
+                        <value n="TYPE" v="co.com.bancodeoccidente.servicios.negocio.administracion.xsd.ejecutarproceso.MnsjeEntradaType"/>
+                     </hash>
+                  </list>
+                  <value n="OP_JAVA_RETURN_TYPE" v="co.com.bancodeoccidente.servicios.negocio.administracion.xsd.ejecutarproceso.MnsjeSalidaType"/>
+                  <value n="OP_NAME" v="ejecutarProceso"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </list>
+            <hash n="PROPERTY_GROUPS"/>
+            <value n="PT_CLASS" v="co.com.bancodeoccidente.servicios.negocio.administracion.wsdl.ejecucionprocesomultipropositos.EjecucionProcesoMultiPropositosPortTypeImpl"/>
+            <value n="PT_EJB_ID" v="file:/C:/aFabricaSAM/Semillero/SEM_Semillero/LOGICA_NEGOCIO/src/co/com/bancodeoccidente/servicios/negocio/administracion/wsdl/ejecucionprocesomultipropositos/EjecucionProcesoMultiPropositosPortTypeImpl.java"/>
+            <value n="PT_SERVICE_INTERFACE" v="co.com.bancodeoccidente.servicios.negocio.administracion.wsdl.ejecucionprocesomultipropositos.EjecucionProcesoMultiPropositosPortType"/>
+            <value n="PT_TOP_DOWN_GENERATED_SEI_NAME" v="co.com.bancodeoccidente.servicios.negocio.administracion.wsdl.ejecucionprocesomultipropositos.EjecucionProcesoMultiPropositosPortType"/>
+         </hash>
+      </list>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <url n="TARGET_PROJECT" path="../../../../../../../../../LOGICA_NEGOCIO.jpr"/>
+      <value n="TOPDOWN_GENERATION_OPTION" v="EJB30_SEI"/>
+      <value n="WS_DEFAULT_PORT_TYPE_CLASS" v="oracle.jdeveloper.webservices.model.java.EJB30PortType"/>
+      <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+      <url n="WS_REFERENCE_WSDL" path="../../../../../../../../EjecucionProcesoMultiPropositosService.wsdl"/>
+      <value n="WS_TARGET_NAMESPACE" v="http://bancodeoccidente.com.co/Servicios/Negocio/Administracion/wsdl/EjecucionProcesoMultiPropositos"/>
+      <value n="WS_URI" v="EjecucionProcesoMultiPropositosService"/>
+      <url n="WS_WSDL_FILE" path="../../../../../../../../EjecucionProcesoMultiPropositosService.wsdl"/>
+      <list n="WSDL_DEPENDENT_FILES">
+         <url path="../../../../../../../../EncabezadosSOA.xsd"/>
+         <url path="../../../../../../../../EjecutarProceso.xsd"/>
+         <url path="../../../../../../../../Diccionario.xsd"/>
+      </list>
+   </hash>
+</jdevws:WebService>

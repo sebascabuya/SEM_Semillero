@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<schema targetNamespace="http://bancodeoccidente.com.co/Servicios/Negocio/Administracion/xsd/EjecutarProceso" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://bancodeoccidente.com.co/Servicios/Negocio/Administracion/xsd/EjecutarProceso" xmlns:enc="http://bancodeoccidente.com.co/Servicios/Base/EncabezadosSOA" xmlns:dic="http://bancodeoccidente.com.co/xsd/base">
+  <import namespace="http://bancodeoccidente.com.co/Servicios/Base/EncabezadosSOA" schemaLocation="EncabezadosSOA.xsd">
+	</import>
+  <import namespace="http://bancodeoccidente.com.co/xsd/base" schemaLocation="Diccionario.xsd"/>
+  <complexType name="EjecutarProcesoEntradaType">
+    <sequence>
+      <element name="Contexto" type="dic:Contexto_type" minOccurs="1" maxOccurs="1"/>
+      <element name="InfoReglaParam" minOccurs="1" maxOccurs="unbounded">
+        <complexType>
+          <sequence>
+            <element name="PrmetroNom" type="dic:PrmetroNom_type" minOccurs="1" maxOccurs="1"/>
+            <element name="PrmetroVlr" type="dic:PrmetroVlr_type" minOccurs="1" maxOccurs="1"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="EjecutarProcesoSalidaType">
+    <sequence minOccurs="1" maxOccurs="1">
+      <element name="PrcsoCod" type="dic:PrcsoCod_type" minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+  <complexType name="MnsjeEntradaType">
+    <sequence>
+      <element ref="enc:EncabezadoEntrada"/>
+      <element name="EjecutarProcesoEntrada" type="tns:EjecutarProcesoEntradaType"/>
+    </sequence>
+  </complexType>
+  <complexType name="MnsjeSalidaType">
+    <sequence>
+      <element ref="enc:EncabezadoSalida"/>
+      <element name="EjecutarProcesoSalida" type="tns:EjecutarProcesoSalidaType"/>
+    </sequence>
+  </complexType>
+  <element name="EjecutarProceso" type="tns:MnsjeEntradaType"/>
+  <element name="EjecutarProcesoRta" type="tns:MnsjeSalidaType"/>
+</schema>

@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://10.120.19.41:7778/LlavesBinesApp/AdministracionLlavesService?WSDL#%7Bhttp%3A%2F%2Fbancodeoccidente.com.co%2FServicios%2FNegocio%2FAdministracion%2Fwsdl%2FAdministracionLlaves%7DAdministracionLlavesService"
+          uri="../co/com/bancodeoccidente/servicios/negocio/administracion/wsdl/administracionllaves/AdministracionLlavesService.wsdl"/>
+</catalog>

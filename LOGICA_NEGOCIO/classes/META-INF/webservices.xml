@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<j2ee:webservices xmlns:j2ee="http://java.sun.com/xml/ns/j2ee">
+	<j2ee:webservice-description>
+		<j2ee:webservice-description-name>adrs.context.rootco.com.bancodeoccidente.servicios.negocio.administracion.wsdl.ejecucionprocesomultipropositos.EjecucionProcesoMultiPropositosPortTypeImpl</j2ee:webservice-description-name>
+		<j2ee:port-component>
+			<j2ee:port-component-name>EjecucionProcesoMultiPropositosPort</j2ee:port-component-name>
+			<j2ee:wsdl-port xmlns:con="http://bancodeoccidente.com.co/Servicios/Negocio/Administracion/wsdl/EjecucionProcesoMultiPropositos">
+				con:EjecucionProcesoMultiPropositosPort
+			</j2ee:wsdl-port>
+			<j2ee:service-impl-bean>
+				<j2ee:ejb-link>EjecucionProcesoMultiPropositosPortTypeImpl</j2ee:ejb-link>
+			</j2ee:service-impl-bean>
+		</j2ee:port-component>
+	</j2ee:webservice-description>	
+</j2ee:webservices>

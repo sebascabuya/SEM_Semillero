@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="EjecucionProcesoMultiPropositos" targetNamespace="http://bancodeoccidente.com.co/Servicios/Negocio/Administracion/wsdl/EjecucionProcesoMultiPropositos" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://bancodeoccidente.com.co/Servicios/Negocio/Administracion/wsdl/EjecucionProcesoMultiPropositos" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://bancodeoccidente.com.co/Servicios/Negocio/Administracion/xsd/EjecutarProceso">
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import namespace="http://bancodeoccidente.com.co/Servicios/Negocio/Administracion/xsd/EjecutarProceso"
+                  schemaLocation="EjecutarProceso.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ejecutarProcesoRequest">
+    <wsdl:part element="ns1:EjecutarProceso" name="input"/>
+  </wsdl:message>
+  <wsdl:message name="ejecutarProcesoResponse">
+    <wsdl:part element="ns1:EjecutarProcesoRta" name="output"/>
+  </wsdl:message>
+  <wsdl:portType name="EjecucionProcesoMultiPropositosPortType">
+    <wsdl:operation name="ejecutarProceso">
+      <wsdl:input message="tns:ejecutarProcesoRequest"/>
+      <wsdl:output message="tns:ejecutarProcesoResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EjecucionProcesoMultiPropositosBinding" type="tns:EjecucionProcesoMultiPropositosPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ejecutarProceso">
+      <soap:operation soapAction="http://bancodeoccidente.com.co/Servicios/Negocio/Administracion/wsdl/EjecucionProcesoMultiPropositos/ejecutarProceso"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EjecucionProcesoMultiPropositosService">
+    <wsdl:port name="EjecucionProcesoMultiPropositosPort" binding="tns:EjecucionProcesoMultiPropositosBinding">
+      <soap:address location="http://localhost:7101/Semillero/EjecucionProcesoMultiPropositosPortTypeImplService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

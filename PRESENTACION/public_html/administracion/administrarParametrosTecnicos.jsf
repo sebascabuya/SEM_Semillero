@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="#{lbl['Administracion__Administrar_Parametros_Tecnicos__Label__JSF']}" id="titulo">
+        <af:form id="f1">
+            <af:pageTemplate viewId="/WEB-INF/template/generalTemplate.jsf" id="pt1">
+                <f:attribute name="paginaTitulo"
+                             value="#{lbl['Administracion__Administrar_Parametros_Tecnicos__Label__Pagina']}"/>
+                <f:attribute name="version" value="#{parametrosTecnicosMB.strVersionBiblioteca}"/>
+                <f:attribute name="funcionalidadTitulo" value="#{lbl['general.header_funcionalidad.titulo']}"/>
+                <f:facet name="contenido">
+                    <af:panelTabbed id="pt2" styleClass="AFStretchWidth">
+                        <af:showDetailItem text="#{lbl['general.detalle']}" id="sdi1">
+                            <af:panelGroupLayout id="pgl2" layout="vertical">
+                                <af:panelGroupLayout id="pgl1" layout="horizontal">
+                                    <af:panelFormLayout id="pfl1" rows="4" maxColumns="1"
+                                                        binding="#{parametrosTecnicosMB.formularioPanelFormBinding}"
+                                                        partialTriggers="t1">
+                                        <af:inputText value="#{parametrosTecnicosMB.referenciaEntityActual.strDominio}"
+                                                      label="Dominio" id="dominioReferencia" autoSubmit="true"
+                                                      contentStyle='width:215px;text-align:left;text-transform:uppercase;'
+                                                      disabled="true" readOnly="#{parametrosTecnicosMB.campoSoloLectura}"
+                                                      required="#{parametrosTecnicosMB.camposObligatorios}"
+                                                      requiredMessageDetail="#{lbl['validacion.obligatoriedad.campo']}"
+                                                      maximumLength="100"></af:inputText>
+                                        <af:inputText value="#{parametrosTecnicosMB.referenciaEntityActual.strRangoValor}"
+                                                      label="Rango Valor" id="rangoReferencia"
+                                                      contentStyle='width:215px;text-align:left;text-transform:uppercase;'
+                                                      readOnly="#{parametrosTecnicosMB.campoSoloLectura}"
+                                                      disabled="#{parametrosTecnicosMB.campoModificarDeshabilitado}"
+                                                      required="#{parametrosTecnicosMB.camposObligatorios}"
+                                                      requiredMessageDetail="#{lbl['validacion.obligatoriedad.campo']}"
+                                                      maximumLength="50"></af:inputText>
+                                        <af:inputText value="#{parametrosTecnicosMB.referenciaEntityActual.strDescripcion}"
+                                                      label="Descripción" id="descripcionReferencia"
+                                                      contentStyle='width:215px;text-align:left;'
+                                                      disabled="#{parametrosTecnicosMB.campoConsultarDeshabilitado}"
+                                                      readOnly="#{parametrosTecnicosMB.campoSoloLectura}"
+                                                      required="#{parametrosTecnicosMB.camposObligatorios}"
+                                                      requiredMessageDetail="#{lbl['validacion.obligatoriedad.campo']}"
+                                                      maximumLength="255"></af:inputText>
+                                        <af:inputText value="#{parametrosTecnicosMB.referenciaEntityActual.strValorParametro}"
+                                                      label="Valor Parámetro" id="valorReferencia"
+                                                      contentStyle='width:215px;text-align:left;'
+                                                      readOnly="#{parametrosTecnicosMB.campoSoloLectura}" maximumLength="1024"></af:inputText>
+                                    </af:panelFormLayout>
+                                </af:panelGroupLayout>
+                                <af:spacer height="5"/>
+                                <af:panelBorderLayout id="pbl1">
+                                    <af:popup id="popupEliminar" binding="#{parametrosTecnicosMB.popupEliminarBinding}">
+                                        <af:dialog id="d2" type="none" titleIconSource="/afr/fusion/warning.png"
+                                                   title="#{lbl['general.eliminar']}">
+                                            <f:facet name="buttonBar">
+                                                <af:group id="g3">
+                                                    <af:commandButton text="#{lbl['general.si']}" id="cb53"
+                                                                      inlineStyle="width:60px;"
+                                                                      action="#{parametrosTecnicosMB.eliminar}"/>
+                                                    <af:commandButton text="#{lbl['general.no']}" id="cb54"
+                                                                      inlineStyle="width:60px;"
+                                                                      action="#{parametrosTecnicosMB.cancelarPopupEliminar}"/>
+                                                </af:group>
+                                            </f:facet>
+                                            <af:outputText value="#{parametrosTecnicosMB.mensajeEliminacion}" id="ot51"/>
+                                        </af:dialog>
+                                    </af:popup>
+                                </af:panelBorderLayout>
+                            </af:panelGroupLayout>
+                            <af:separator id="sep"/>
+                            <af:spacer height="12"/>
+                            <af:panelFormLayout id="pfl6" rows="2" maxColumns="2">
+                                <af:panelGroupLayout id="pgl3" halign="center">
+                                    <af:toolbar id="botones" partialTriggers="t1" inlineStyle="width:auto; height:auto;"
+                                                styleClass="AFStretchWidth">
+                                        <af:commandButton text="#{lbl['general.consultar']}" id="cb1"
+                                                          action="#{parametrosTecnicosMB.consultar}"
+                                                          inlineStyle="padding:1px 13px; text-align:center;"
+                                                          disabled="#{parametrosTecnicosMB.botonConsultarDeshabilitado}"/>
+                                        <af:commandButton text="#{lbl['general.crear']}" id="cb2"
+                                                          action="#{parametrosTecnicosMB.crear}"
+                                                          disabled="#{parametrosTecnicosMB.botonCrearDeshabilitado}"
+                                                          inlineStyle="padding:1px 20px; text-align:center;"/>
+                                        <af:commandButton text="#{lbl['general.modificar']}" id="cb3"
+                                                          action="#{parametrosTecnicosMB.modificar}"
+                                                          inlineStyle="padding:1px 15px; text-align:center;"
+                                                          disabled="#{parametrosTecnicosMB.botonModificarDeshabilitado}"/>
+                                        <af:commandButton text="#{lbl['general.eliminar']}" id="cb4"
+                                                          inlineStyle="padding:1px 15px; text-align:center;"
+                                                          disabled="#{parametrosTecnicosMB.botonEliminarDeshabilitado}">
+                                            <af:showPopupBehavior popupId="popupEliminar" triggerType="action"/>
+                                        </af:commandButton>
+                                        <af:commandButton text="#{lbl['general.aceptar']}" id="cb5"
+                                                          action="#{parametrosTecnicosMB.aceptar}"
+                                                          inlineStyle="padding:1px 15px; text-align:center;"
+                                                          disabled="#{parametrosTecnicosMB.botonAceptarDeshabilitado}"/>
+                                        <af:commandButton text="#{lbl['general.cancelar']}" id="cb6"
+                                                          inlineStyle="padding:1px 15px; text-align:center;"
+                                                          disabled="#{parametrosTecnicosMB.botonCancelarDeshabilitado}"
+                                                          action="#{parametrosTecnicosMB.cancelar}" immediate="true"/>
+                                    </af:toolbar>
+                                </af:panelGroupLayout>
+                            </af:panelFormLayout>
+                            <af:spacer height="15"/>
+                            <af:panelGroupLayout id="pgl4">
+                                <af:table var="row" emptyText="#{lbl['general.sin.datos']}"
+                                          rowSelection="#{parametrosTecnicosMB.tipoSeleccionTabla}" id="t1"
+                                          columnResizing="disabled" disableColumnReordering="true" fetchSize="50"
+                                          autoHeightRows="10" width="95%"
+                                          selectionListener="#{parametrosTecnicosMB.seleccionarRegistro}"
+                                          value="#{parametrosTecnicosMB.listaEntidades}"
+                                          binding="#{parametrosTecnicosMB.tablaListaBinding}" displayRow="first"
+                                          horizontalGridVisible="true" verticalGridVisible="true" contentDelivery="immediate"
+                                          columnStretching="multiple">
+                                    <af:column id="c1" headerText="Dominio" width="20%">
+                                        <af:outputText value="#{row.strDominio}" id="columnDominio"/>
+                                    </af:column>
+                                    <af:column id="c2" headerText="Rango Valor" width="10%">
+                                        <af:outputText value="#{row.strRangoValor}" id="columnRango"/>
+                                    </af:column>
+                                    <af:column id="c3" headerText="Descripción" width="50%">
+                                        <af:outputText value="#{row.strDescripcion}" id="columnDescripcion"/>
+                                    </af:column>
+                                    <af:column id="c4" headerText="Valor Parámetro" width="20%">
+                                        <af:outputText value="#{row.strValorParametro}" id="columnavalorParametro"/>
+                                    </af:column>
+                                </af:table>
+                            </af:panelGroupLayout>
+                            <af:spacer height="15"/>
+                            <af:panelGroupLayout id="pgl7" halign="left" partialTriggers="t1 pgl7">
+                                <af:toolbar id="tToolPagCrucEliF1">
+                                    <af:panelGroupLayout id="pnPaginCrucE2">
+                                        <af:outputText value="#{parametrosTecnicosMB.paginador.textoPaginacion}"
+                                                       id="otPaginCrucE2"/>
+                                        <af:spacer width="10" height="10" id="sPaginCrucE2"/>
+                                        <af:commandButton text="#{lbl['general.regresar']}" id="clPaginCrucE2"
+                                                          action="#{parametrosTecnicosMB.paginador.buscarAnterior}"
+                                                          disabled="#{parametrosTecnicosMB.paginador.habilitadoAtras}"
+                                                          inlineStyle="width:40pt;"
+                                                          binding="#{parametrosTecnicosMB.bindingCommandButtonRegresar}"/>
+                                        <af:commandButton text="#{lbl['general.siguiente']}" id="c2PaginCrucE2"
+                                                          action="#{parametrosTecnicosMB.paginador.buscarSiguiente}"
+                                                          disabled="#{parametrosTecnicosMB.paginador.habilitadoSiguiente}"
+                                                          inlineStyle="width:40pt;"
+                                                          binding="#{parametrosTecnicosMB.bindingCommandButtonSiguiente}"/>
+                                    </af:panelGroupLayout>
+                                </af:toolbar>
+                            </af:panelGroupLayout>
+                            <af:spacer height="10"/>
+                        </af:showDetailItem>
+                    </af:panelTabbed>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

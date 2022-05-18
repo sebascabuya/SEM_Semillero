@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web:weblogic-webservices xmlns:web="http://xmlns.oracle.com/weblogic/weblogic-webservices">
+	<web:webservice-description>
+		<web:webservice-description-name>adrs.context.rootco.com.bancodeoccidente.servicios.negocio.administracion.wsdl.ejecucionprocesomultipropositos.EjecucionProcesoMultiPropositosPortTypeImpl</web:webservice-description-name>
+		<web:webservice-type>JAXWS</web:webservice-type>
+		<web:port-component>
+			<web:port-component-name>EjecucionProcesoMultiPropositosPort</web:port-component-name>
+			<web:service-endpoint-address>
+				<web:webservice-contextpath>SemilleroWS</web:webservice-contextpath>
+				<web:webservice-serviceuri>/EjecucionProcesoMultiPropositosService</web:webservice-serviceuri>
+			</web:service-endpoint-address>
+		</web:port-component>
+	</web:webservice-description>	
+</web:weblogic-webservices>

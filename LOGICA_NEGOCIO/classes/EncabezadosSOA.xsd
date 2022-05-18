@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://bancodeoccidente.com.co/Servicios/Base/EncabezadosSOA" xmlns:tns="http://bancodeoccidente.com.co/Servicios/Base/EncabezadosSOA" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dic="http://bancodeoccidente.com.co/xsd/base">
+  <xsd:import namespace="http://bancodeoccidente.com.co/xsd/base" schemaLocation="Diccionario.xsd"/>
+  <xsd:element name="EncabezadoEntrada" type="tns:EncabezadoEntradaType"/>
+  <xsd:element name="EncabezadoSalida" type="tns:EncabezadoSalidaType"/>
+  <xsd:complexType name="EncabezadoEntradaType">
+    <xsd:sequence>
+      <xsd:element name="AplCod" type="xsd:int"/>
+      <xsd:element name="TrmnalId" type="dic:TrmnalId_type"/>
+      <xsd:element name="SesionId" type="dic:SesionId_type"/>
+      <xsd:element name="PtcionId" type="dic:PtcionId_type"/>
+      <xsd:element name="Usrio" type="dic:Usrio_type"/>
+      <xsd:element name="PtcionFecha" type="xsd:dateTime"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EncabezadoSalidaType">
+    <xsd:sequence>
+      <xsd:element name="PtcionId" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="RtaCod" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="RtaMnsje" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="SistMnsje" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MasMnsjes" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
